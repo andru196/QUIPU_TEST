@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:QUIPU_TEST"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Button x:Name="SelectFileButton" Content="Выбарать файл"  HorizontalAlignment="Left" Margin="658,10,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.52,-0.12" Click="SelectFileButton_Click">
+			<Button.ToolTip>
+				<ToolTip>Выбрать файл-источник ссылок</ToolTip>
+			</Button.ToolTip>
+		</Button>
+		<Button x:Name="ScanButton" Content="Начать" HorizontalAlignment="Left" Margin="658,35,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.52,-0.12" Click="ScanButton_Click">
+			<Button.ToolTip>
+				<ToolTip>Начать скинрование ссылок</ToolTip>
+			</Button.ToolTip>
+		</Button>
+		<TextBox x:Name="FileNameTextBox" HorizontalAlignment="Left" Height="37" Margin="10,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="643"/>
+		<ScrollViewer Margin="0,92,0,62">
+			<TextBlock Name="resultTextBlock"  HorizontalAlignment="Stretch"  TextWrapping="Wrap"  VerticalAlignment="Stretch"/>
+		</ScrollViewer>
+		<TextBlock HorizontalAlignment="Left" Name="TotalTextBlock" Margin="10,58,0,0" TextWrapping="Wrap" Text="Результат:" VerticalAlignment="Top" FontSize="22" Width="175"/>
+		<TextBlock HorizontalAlignment="Left" Margin="10,362,0,0" TextWrapping="Wrap" Name="RecordTextBlock" VerticalAlignment="Top" Height="47" Width="560"/>
+
+	</Grid>
 </Window>
